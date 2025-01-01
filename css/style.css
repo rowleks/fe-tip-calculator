@@ -7,7 +7,7 @@
     --grayish-cyan: hsl(184, 14%, 56%);
     --light-grayish-cyan: hsl(185, 41%, 84%);
     --vl-grayish-cyan: hsl(189, 41%, 97%);
-    --white: (0, 0%, 100%);
+    --white: hsl(0, 0%, 100%);
 }
 
 
@@ -18,7 +18,124 @@
 }
 
 body {
-    font-family: "Space Mono"
+    font-family: "Space Mono";
+    background-color: var(--light-grayish-cyan);
+    color: var(--vdk-cyan);
+    height: 100vh;
+}
+
+main.main {
+    background-color: var(--white);
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+header {
+  padding: 2rem;
+  text-align: center;
+}
+
+form {
+    background-color: var(--white);
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+fieldset {
+    border: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+fieldset :first-child {
+    font-weight: 600;
+    color: var(--dk-grayish-cyan);
+}
+
+fieldset:nth-child(2) {
+    gap: 1rem;
+}
+
+input {
+    padding: .8rem 1rem;
+    width: 100%;
+    background-color: var(--vl-grayish-cyan);
+    border: none;
+    border-radius: 5px;
+    outline-color: var(--grayish-cyan);
+    text-align: right;
+    caret-color: var(--grayish-cyan);
+    color: var(--vdk-cyan);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+input::placeholder {
+    color: var(--grayish-cyan);
+    font-size: 1rem;
+    text-align: left;
+}
+
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+label {
+    display: block;
+}
+
+div.tips-group {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 50%);
+    gap: 1rem;
+}
+
+.tips-group span {
+    padding: .5rem;
+    background-color: var(--vdk-cyan);
+    color: var(--white);
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+}
+
+.tips-group label:last-child {
+   display: contents;
+}
+
+ .tips-group input::placeholder {
+    color: var(--dk-grayish-cyan);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.ph-img {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    max-width: 20px;
+}
+
+input[type='radio']:checked + span {
+    background-color: var(--str-cyan);
+    color: var(--vdk-cyan);
 }
 
 

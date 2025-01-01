@@ -3,10 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
     <link rel="stylesheet" href="./css/style.css">
     <title>Tip Calculator</title>
 </head>
 <body>
-    
+    <header><img src="./assets/logo.svg" alt=""></header>
+    <main class="main">
+        <form action="">
+            <fieldset>
+                <label for="bill">Bill</label>
+                <input class="ph-input" type="number" name="amount" id="bill" placeholder="">
+                <img class="ph-img" src="./assets/icon-dollar.svg" alt="">
+            </fieldset>
+            
+
+            <fieldset>
+                <label for="discount">Select Tip %</label>
+                <div class="tips-group">
+
+                    <label>
+                        <input type="radio" name="discount" id="5p" value="5%">
+                        <span>5%</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="discount" id="10p" value="10%">
+                        <span>10%</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="discount" id="15p" value="15%">
+                        <span>15%</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="discount" id="25p" value="25%">
+                        <span>25%</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="discount" id="5p" value="50%">
+                        <span>50%</span>
+                    </label>
+
+                    <label>
+                        <input type="number" name="discount" id="5p" value="" placeholder="Custom">
+                    </label>
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <label for="people">Number of People</label>
+                <input class="input-people" type="Number" placeholder="">
+                <img class="ph-img" src="./assets/icon-person.svg" alt="">
+            </fieldset>
+           
+
+            
+
+            
+        </form>
+    </main>
 </body>
 </html>
