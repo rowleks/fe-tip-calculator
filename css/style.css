@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 :root {
     --str-cyan: hsl(172, 67%, 45%);
     --vdk-cyan: hsl(183, 100%, 15%);
@@ -7,8 +5,11 @@
     --grayish-cyan: hsl(184, 14%, 56%);
     --light-grayish-cyan: hsl(185, 41%, 84%);
     --vl-grayish-cyan: hsl(189, 41%, 97%);
+    --error-red: #d39378;
     --white: hsl(0, 0%, 100%);
 }
+
+
 
 * {
     margin: 0;
@@ -20,13 +21,15 @@ body {
     font-family: "Space Mono";
     background-color: var(--light-grayish-cyan);
     color: var(--vdk-cyan);
+    height: 100%;
+
 }
 
 main.main {
     background-color: var(--white);
     border-radius: 20px 20px 0 0;
     overflow: hidden;
-    height: 100%;
+    height: calc(100% - 7rem)
 }
 
 header {
@@ -41,6 +44,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    height: 100%;
 }
 
 section.top {
@@ -85,6 +89,11 @@ input {
     font-weight: 700;
     font-size: 1.2rem;
     font-family: inherit;
+}
+
+input.err {
+    outline-color: var(--error-red);
+    border: 3px solid var(--error-red);
 }
 
 input[type="radio"] {
@@ -207,6 +216,20 @@ button:hover {
     background-color: var(--light-grayish-cyan)
 }
 
+label.title {
+    display: flex;
+}
+
+span.error {
+    margin-left: auto;
+    visibility: hidden;
+    color: var(--error-red);
+}
+
+span.show {
+    visibility: visible;
+}
+
 @media (min-width:900px) {
 
     body {
@@ -248,6 +271,24 @@ button:hover {
     div.amounts {
         gap: 2rem;
     }
+
+    div.attribution {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: unset;
+    }
+}
+
+.attribution { 
+    font-size: 14px; 
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--white);
+ }
+
+.attribution a { 
+    color: var(--vdk-cyan); 
 }
 
 
