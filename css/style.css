@@ -10,7 +10,6 @@
     --white: hsl(0, 0%, 100%);
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +20,6 @@ body {
     font-family: "Space Mono";
     background-color: var(--light-grayish-cyan);
     color: var(--vdk-cyan);
-    height: 100vh;
 }
 
 main.main {
@@ -32,14 +30,20 @@ main.main {
 }
 
 header {
-  padding: 2rem;
-  text-align: center;
+    padding: 2rem;
+    text-align: center;
 }
 
 form {
     background-color: var(--white);
     width: 100%;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section.top {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -76,20 +80,13 @@ input {
     font-size: 1.2rem;
 }
 
-input::placeholder {
-    color: var(--grayish-cyan);
-    font-size: 1rem;
-    text-align: left;
-}
-
-
 input[type="radio"] {
     display: none;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
+    -webkit-appearance: none;
 }
 
 label {
@@ -115,6 +112,11 @@ div.tips-group {
     width: 100%;
 }
 
+.tips-group span:hover {
+    background-color: var(--light-grayish-cyan);
+    color: var(--vdk-cyan);
+}
+
 .tips-group label:last-child {
    display: contents;
 }
@@ -129,13 +131,61 @@ div.tips-group {
 .ph-img {
     position: absolute;
     left: 1rem;
-    top: 50%;
+    bottom: 1rem;
     max-width: 20px;
 }
 
 input[type='radio']:checked + span {
     background-color: var(--str-cyan);
     color: var(--vdk-cyan);
+}
+
+section.checkout {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.2rem;
+    gap: 1rem;
+    background-color: var(--vdk-cyan);
+    color: var(--white);
+    border-radius: 10px;
+}
+
+div.amount, div.total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+span.value {
+    font-size: 1.5rem;
+    color: var(--str-cyan);
+    font-weight: 700;
+}
+
+br + span {
+    color: var(--grayish-cyan);
+    font-size: .9rem;
+    display: inline-block;
+    margin-top: -1rem;
+}
+
+
+button {
+    border: none;
+    padding: .8rem;
+    border-radius: 5px;
+    background-color: var(--str-cyan);
+    color: var(--vdk-cyan);
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: unset;
+}
+
+button:hover {
+    background-color: var(--light-grayish-cyan)
 }
 
 

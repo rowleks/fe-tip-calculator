@@ -11,60 +11,73 @@
     <header><img src="./assets/logo.svg" alt=""></header>
     <main class="main">
         <form action="">
-            <fieldset>
-                <label for="bill">Bill</label>
-                <input class="ph-input" type="number" name="amount" id="bill" placeholder="">
-                <img class="ph-img" src="./assets/icon-dollar.svg" alt="">
-            </fieldset>
-            
+            <section class="top">
+                <fieldset>
+                    <label for="bill">Bill</label>
+                    <input class="ph-input" type="number" name="amount" id="bill" placeholder="">
+                    <img class="ph-img" src="./assets/icon-dollar.svg" alt="">
+                </fieldset>
+                
+    
+                <fieldset>
+                    <label for="discount">Select Tip %</label>
+                    <div class="tips-group">
+    
+                        <label>
+                            <input type="radio" name="discount" id="5p" value="5">
+                            <span>5%</span>
+                        </label>
+    
+                        <label>
+                            <input type="radio" name="discount" id="10p" value="10">
+                            <span>10%</span>
+                        </label>
+    
+                        <label>
+                            <input type="radio" name="discount" id="15p" value="15%">
+                            <span>15%</span>
+                        </label>
+    
+                        <label>
+                            <input type="radio" name="discount" id="25p" value="25">
+                            <span>25%</span>
+                        </label>
+    
+                        <label>
+                            <input type="radio" name="discount" id="50" value="50">
+                            <span>50%</span>
+                        </label>
+    
+                        <label>
+                            <input type="number" name="discount" id="custom" value="" placeholder="Custom">
+                        </label>
+                    </div>
+    
+                </fieldset>
+    
+                <fieldset>
+                    <label for="people">Number of People</label>
+                    <input class="input-people" type="Number" placeholder="">
+                    <img class="ph-img" src="./assets/icon-person.svg" alt="">
+                </fieldset>
+            </section>
 
-            <fieldset>
-                <label for="discount">Select Tip %</label>
-                <div class="tips-group">
-
-                    <label>
-                        <input type="radio" name="discount" id="5p" value="5%">
-                        <span>5%</span>
-                    </label>
-
-                    <label>
-                        <input type="radio" name="discount" id="10p" value="10%">
-                        <span>10%</span>
-                    </label>
-
-                    <label>
-                        <input type="radio" name="discount" id="15p" value="15%">
-                        <span>15%</span>
-                    </label>
-
-                    <label>
-                        <input type="radio" name="discount" id="25p" value="25%">
-                        <span>25%</span>
-                    </label>
-
-                    <label>
-                        <input type="radio" name="discount" id="5p" value="50%">
-                        <span>50%</span>
-                    </label>
-
-                    <label>
-                        <input type="number" name="discount" id="5p" value="" placeholder="Custom">
-                    </label>
+            <section class="checkout">
+                <div class="amount">
+                    <p>Tip Amount <br><span>/ person</span></p>
+                    <span class="value">$4.27</span>
                 </div>
+                <div class="total">
+                    <p>Total <br><span>/ person</span></p>
+                    <span class="value">$32.79</span>
+                </div>
+    
+                <button>RESET</button>
+    
+            </section>
 
-            </fieldset>
-
-            <fieldset>
-                <label for="people">Number of People</label>
-                <input class="input-people" type="Number" placeholder="">
-                <img class="ph-img" src="./assets/icon-person.svg" alt="">
-            </fieldset>
-           
-
-            
-
-            
         </form>
+
     </main>
 </body>
 </html>
