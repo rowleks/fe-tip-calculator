@@ -14,12 +14,12 @@
             <section class="top">
                 <fieldset>
                     <label for="bill">Bill</label>
-                    <input class="ph-input" type="number" name="amount" id="bill" placeholder="">
+                    <input class="ph-input" type="number" name="amount" id="bill" placeholder="" min="0">
                     <img class="ph-img" src="./assets/icon-dollar.svg" alt="">
                 </fieldset>
                 
     
-                <fieldset>
+                <fieldset class="select-tip">
                     <label for="discount">Select Tip %</label>
                     <div class="tips-group">
     
@@ -49,7 +49,7 @@
                         </label>
     
                         <label>
-                            <input type="number" name="discount" id="custom" value="" placeholder="Custom">
+                            <input type="number" name="discount" id="custom" value="" placeholder="Custom" min="0">
                         </label>
                     </div>
     
@@ -57,19 +57,22 @@
     
                 <fieldset>
                     <label for="people">Number of People</label>
-                    <input class="input-people" type="Number" placeholder="">
+                    <input class="input-people" type="number" placeholder="" min="0">
                     <img class="ph-img" src="./assets/icon-person.svg" alt="">
                 </fieldset>
             </section>
 
             <section class="checkout">
-                <div class="amount">
-                    <p>Tip Amount <br><span>/ person</span></p>
-                    <span class="value">$4.27</span>
-                </div>
-                <div class="total">
-                    <p>Total <br><span>/ person</span></p>
-                    <span class="value">$32.79</span>
+                <div class="amounts">
+                    <div class="amount">
+                        <p>Tip Amount <br><span>/ person</span></p>
+                        <span class="value">$4.27</span>
+                    </div>
+                    <div class="total">
+                        <p>Total <br><span>/ person</span></p>
+                        <span class="value">$32.79</span>
+                    </div>
+
                 </div>
     
                 <button>RESET</button>
