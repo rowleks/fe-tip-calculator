@@ -112,6 +112,10 @@ input[type="number"] {
     letter-spacing: 1.5px;
 }
 
+input[type="number"]::placeholder {
+    color: var(--grayish-cyan);
+}
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
