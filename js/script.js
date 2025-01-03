@@ -4,6 +4,8 @@ const totalElem = document.getElementById('total')
 const radios = document.querySelectorAll('input[type="radio"]')
 const numbers = document.querySelectorAll('input[type="number"]')
 const errSpan = document.querySelectorAll('.error')
+const btn = document.getElementById('btn')
+const customInput = document.getElementById('custom')
 
 const data = { }
 
@@ -19,6 +21,7 @@ function handleReset(e) {
     for(const key in data) { data[key] = null}
     numbers.forEach(n => n.classList.remove('err'))
     errSpan.forEach(s => s.classList.remove('show'))
+    btn.setAttribute('disabled', 'true')
 }
 
 function displayTotal(e) {
@@ -26,24 +29,14 @@ function displayTotal(e) {
     data[e.target.name] = parseFloat(e.target.value);
 
     if (e.target.id === 'custom') { radios.forEach(radio => 
-        radio.checked = false) } 
-
+        radio.checked = false) }
+    if (e.target.type === 'radio') { customInput.value = ""}
     if (e.target.id === 'bill')
     { 
-        if(e.target.value === 0) 
-            {
-                e.target.classList.toggle('err')
-            }
-
         if(e.target.value.includes('.'))
         {
             e.target.value = e.target.value.replace(/(\.\d{2})\d+$/, '$1')
         }
-    }
-
-    if (e.target.value === 0)
-    {
-        e.target.classList.add('err')
     }
 
     let tipAmount;
@@ -59,8 +52,8 @@ function displayTotal(e) {
     {
         amountElem.textContent = `$${tipAmount.toFixed(2)}`
         totalElem.textContent = `$${total.toFixed(2)}`
+        btn.removeAttribute('disabled')
     }
-
 
 }
 

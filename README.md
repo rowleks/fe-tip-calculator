@@ -16,8 +16,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -29,12 +27,12 @@ Users should be able to:
 - Calculate the correct tip and total cost of the bill per person
 
 ### Screenshot
-![](./assets/screenshot.png)
 
+![](./assets/screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [View here](https://www.frontendmentor.io/solutions/tip-calculator-WP92DAQ53t)
 - Live Site URL: [View here](https://fe-tip-calculator.netlify.app/)
 
 ## My process
@@ -48,13 +46,11 @@ Users should be able to:
 - Mobile-first workflow
 - Vanilla JavaScript
 
-
 ### What I learned
 
 I learnt more about HTML forms and form validation.
 
 I also learnt more about JavaScript event listeners and DOM manipulations
-
 
 ### Continued development
 
@@ -70,7 +66,6 @@ I'll continue practicing to get better with JavaScript form validations and erro
 - Website - [Rowland Momoh](https://rowland-momoh.netlify.app/://www.your-site.com)
 - Frontend Mentor - [@rowleks](https://www.frontendmentor.io/profile/rowleks)
 - Twitter - [@Rolexks](https://x.com/Rolexks)
-
 
 ## Acknowledgments
 
